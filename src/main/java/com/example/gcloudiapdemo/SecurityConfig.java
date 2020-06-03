@@ -12,7 +12,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
-                .authorizeRequests().antMatchers("/topsecret").authenticated()
+                .authorizeRequests().antMatchers("/admin/**").authenticated()
+                .and()
+                .authorizeRequests().antMatchers("/api/**").authenticated()
                 .and()
                 .oauth2ResourceServer()
                 .jwt()

@@ -12,7 +12,7 @@ import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-@RestController
+@RestController("admin")
 public class ExampleController {
 
 
@@ -35,10 +35,10 @@ public class ExampleController {
 
     }
 
-    @RequestMapping("/headers")
-    public Map<String, String> headers(HttpServletRequest req) {
-        return Collections.list(req.getHeaderNames())
-                .stream()
-                .collect(Collectors.toMap(Function.identity(), req::getHeader));
-    }
+//    @RequestMapping("/headers")
+//    public Map<String, String> headers(HttpServletRequest req) {
+//        return Collections.list(req.getHeaderNames())
+//                .stream()
+//                .collect(Collectors.toMap(Function.identity(), req::getHeader));
+//    }
 }
