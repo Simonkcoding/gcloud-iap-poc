@@ -35,11 +35,4 @@ public class ExampleController {
         }
 
     }
-
-//    @RequestMapping("/headers")
-//    public Map<String, String> headers(HttpServletRequest req) {
-//        return Collections.list(req.getHeaderNames())
-//                .stream()
-//                .collect(Collectors.toMap(Function.identity(), req::getHeader));
-//    }
 }

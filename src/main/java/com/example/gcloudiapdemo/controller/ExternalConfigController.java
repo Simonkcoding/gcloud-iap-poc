@@ -16,13 +16,14 @@ public class ExternalConfigController {
 
     @GetMapping
     public Iterable<ExternalConfig> getAllConfig() {
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        if (authentication != null && authentication.getPrincipal() instanceof Jwt) {
-            return service.getAllConfig();
-        }
-        else {
-            return null;
-        }
+//        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+//        if (authentication != null && authentication.getPrincipal() instanceof Jwt) {
+//            return service.getAllConfig();
+//        }
+//        else {
+//            return null;
+//        }
+        return service.getAllConfig();
     }
 
     @GetMapping("/{variableKey}")
